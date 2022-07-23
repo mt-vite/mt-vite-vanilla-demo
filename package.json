@@ -1,0 +1,49 @@
+{
+  "name": "mt-vite",
+  "version": "0.0.1",
+  "description": "Muiti target Vite!",
+  "license": "MIT",
+  "author": {
+    "name": "mzwing",
+    "email": "mzwing@mzwing.eu.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mt-vite/mt-vite.git"
+  },
+  "main": "./electron/main.cjs",
+  "scripts": {
+    "dev:web": "vite --port 5173",
+    "dev:electron": "concurrently -k \"vite --port 5173\" \"wait-on tcp:5173 && cross-env NODE_ENV=development electron .\"",
+    "preview:web": "vite preview",
+    "preview:electron": "vite build && electron .",
+    "build:web": "vite build",
+    "build:win": "vite build && electron-builder build --win --publish=never",
+    "build:linux": "vite build && electron-builder build --linux --publish=never",
+    "build:mac": "vite build && electron-builder build --mac --publish=never",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:html": "htmlhint \"**/*.html\""
+  },
+  "maintainers": [
+    "mzwing",
+    "so1ve",
+    "chihuo2104"
+  ],
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "cross-env": "^7.0.3",
+    "electron": "^19.0.9",
+    "electron-builder": "^23.1.0",
+    "eslint": "^8.20.0",
+    "eslint-plugin-jsonc": "^2.3.1",
+    "eslint-plugin-markdown": "^3.0.0",
+    "eslint-plugin-yml": "^1.0.0",
+    "htmlhint": "^1.1.4",
+    "vite": "^3.0.2",
+    "wait-on": "^6.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/bbg-contributors/bbg-esm/issues"
+  }
+}
