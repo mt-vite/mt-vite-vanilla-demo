@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:mt-vite/mt-vite.git"
+    "url": "git@github.com:mt-vite/mt-vite-vanilla-demo.git"
   },
   "main": "./electron/main.cjs",
   "scripts": {
