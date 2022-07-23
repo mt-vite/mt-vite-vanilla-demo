@@ -1,6 +1,6 @@
 {
-  "appId": "com.github.mt-vite.mt-vite-electron",
-  "productName": "MTViteElectron",
+  "appId": "com.github.mt-vite.mt-vite-vanilla-demo-electron",
+  "productName": "MTViteVanillaDemoElectron",
   "asar": true,
   "win": {
     "target": {
@@ -15,11 +15,11 @@
     "allowToChangeInstallationDirectory": true
   },
   "linux": {
-    "executableName": "mt-vite-electron",
-    "description": "Muiti target Vite!",
+    "executableName": "mt-vite-vanilla-demo-electron",
+    "description": "mt-vite vanilla demo",
     "desktop": {
-      "StartupWMClass": "mt-vite-electron",
-      "Keywords": "vite;electron"
+      "StartupWMClass": "mt-vite-vanilla-demo-electron",
+      "Keywords": "vite;electron;vanilla-js"
     },
     "target": [
       "deb",
