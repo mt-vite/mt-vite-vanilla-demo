@@ -1,5 +1,5 @@
 {
-  "name": "mt-vite-vanilla-demo",
+  "name": "mt-vite-vanilla-demo-test-tauri",
   "version": "0.0.1",
   "description": "mt-vite vanilla demo",
   "license": "MIT",
@@ -15,12 +15,14 @@
   "scripts": {
     "dev:web": "vite --port 5173",
     "dev:electron": "concurrently -k \"vite --port 5173\" \"wait-on tcp:5173 && cross-env NODE_ENV=development electron .\"",
+    "dev:tauri": "tauri dev",
     "preview:web": "vite preview",
     "preview:electron": "vite build && electron .",
     "build:web": "vite build",
-    "build:win": "vite build && electron-builder build --win --publish=never",
-    "build:linux": "vite build && electron-builder build --linux --publish=never",
-    "build:mac": "vite build && electron-builder build --mac --publish=never",
+    "build:electron-win": "vite build && electron-builder build --win --publish=never",
+    "build:electron-linux": "vite build && electron-builder build --linux --publish=never",
+    "build:electron-mac": "vite build && electron-builder build --mac --publish=never",
+    "build:tauri": "tauri build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:html": "htmlhint \"**/*.html\""
@@ -30,7 +32,11 @@
     "so1ve",
     "chihuo2104"
   ],
+  "dependencies": {
+    "@tauri-apps/api": "^1.0.2"
+  },
   "devDependencies": {
+    "@tauri-apps/cli": "^1.0.5",
     "concurrently": "^7.3.0",
     "cross-env": "^7.0.3",
     "electron": "^19.0.9",
